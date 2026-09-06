@@ -4,15 +4,11 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@100..900&amp;family=Manrope:wght@100..900&amp;family=Space+Grotesk:wght@100..900&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap"
     rel="stylesheet" />
   <style>
     @layer base {
@@ -524,8 +520,8 @@
     .saga-video-section__media {
       position: absolute;
       inset: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100svh;
       z-index: 0;
       overflow: hidden;
       background: #050505
@@ -2813,377 +2809,6 @@
       pointer-events: auto
     }
 
-    /* Section 07 — Akira Toriyama soft portrait background */
-    #phase-07 {
-      isolation: isolate;
-      background: #050608
-    }
-
-    #phase-07 .saga-phase-akira {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      overflow: hidden;
-      pointer-events: none
-    }
-
-    #phase-07 .saga-phase-akira img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      opacity: .22;
-      filter: grayscale(1) contrast(1.05) brightness(.85);
-      transform: scale(1.04)
-    }
-
-    #phase-07 .saga-phase-wash {
-      background:
-        linear-gradient(90deg, rgba(5, 6, 8, .82) 0%, rgba(5, 6, 8, .45) 42%, rgba(5, 6, 8, .55) 100%),
-        linear-gradient(180deg, rgba(5, 6, 8, .55) 0%, rgba(5, 6, 8, .18) 40%, rgba(5, 6, 8, .78) 100%)
-    }
-
-    #phase-07 .saga-phase-video {
-      display: none
-    }
-
-    /* ========== MOBILE AUDIT / CROSS-DEVICE HARDENING ========== */
-    html,
-    body {
-      max-width: 100%;
-      overflow-x: hidden
-    }
-
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none
-    }
-
-    .no-scrollbar::-webkit-scrollbar {
-      display: none
-    }
-
-    h1, h2, h3, h4, h5,
-    .font-display-xl,
-    .font-display-lg,
-    .font-headline-lg,
-    .font-headline-md,
-    .font-headline-sm {
-      overflow-wrap: anywhere;
-      word-break: break-word;
-      max-width: 100%
-    }
-
-    .saga-video-section__media {
-      width: 100%;
-      max-width: 100%
-    }
-
-    @media (max-width: 900px) {
-      .saga-timeline {
-        left: 6px;
-        transform: translateY(-50%) scale(0.92)
-      }
-
-      .saga-timeline a {
-        width: 18px;
-        height: 28px
-      }
-
-      .saga-hero__title h1 {
-        letter-spacing: .18em !important;
-        padding-inline: 8px
-      }
-
-      .saga-hero__subtitle {
-        letter-spacing: .12em !important;
-        line-height: 1.7 !important;
-        padding-inline: 4px
-      }
-
-      .saga-hero__eyebrow span {
-        letter-spacing: .22em !important
-      }
-
-      .era-tab,
-      .roster-filter {
-        flex: none;
-        white-space: nowrap;
-        min-height: 40px;
-        display: inline-flex;
-        align-items: center
-      }
-
-      .text-display-lg,
-      .font-display-lg {
-        font-size: clamp(28px, 8vw, 40px) !important;
-        line-height: 1.05 !important;
-        letter-spacing: -.02em !important
-      }
-
-      .text-headline-lg,
-      .font-headline-lg {
-        font-size: clamp(24px, 6.5vw, 32px) !important;
-        line-height: 1.15 !important
-      }
-
-      .saga-video-section__title {
-        font-size: clamp(36px, 12vw, 64px) !important;
-        letter-spacing: -.03em !important;
-        line-height: .92 !important
-      }
-
-      .saga-video-section__description {
-        letter-spacing: .04em !important;
-        max-width: 100%
-      }
-
-      .saga-video-section__meta {
-        flex-wrap: wrap;
-        gap: 10px 14px;
-        letter-spacing: .18em !important
-      }
-
-      .saga-video-section__content {
-        padding-left: max(20px, env(safe-area-inset-left));
-        padding-right: max(20px, env(safe-area-inset-right));
-        padding-bottom: max(88px, env(safe-area-inset-bottom))
-      }
-
-      .saga-card-carousel-wrap {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        overscroll-behavior-x: contain;
-        margin-inline: -4px;
-        padding-inline: 4px;
-        padding-bottom: 8px
-      }
-
-      .saga-card-carousel {
-        width: max(100%, 920px);
-        height: 400px
-      }
-
-      .saga-expand-card {
-        height: 400px;
-        min-width: 64px;
-        border-radius: 20px
-      }
-
-      .saga-expand-card.is-active {
-        max-width: min(320px, 78vw);
-        border-radius: 24px
-      }
-
-      .saga-expand-card .main {
-        font-size: 15px
-      }
-
-      .dragon-radar-room {
-        width: 100%;
-        min-height: 520px;
-        border-radius: 12px
-      }
-
-      .dragon-radar-room .dragon-ball-relic-grid {
-        width: min(100%, 340px);
-        grid-template-columns: repeat(4, 1fr) !important;
-        gap: 18px 10px
-      }
-
-      .dragon-radar-room .dragon-ball-relic__orb {
-        width: clamp(52px, 14vw, 72px)
-      }
-
-      .radar-copy {
-        left: 14px;
-        top: 14px;
-        right: 14px
-      }
-
-      .radar-copy span {
-        max-width: 100%;
-        letter-spacing: .06em
-      }
-
-      .radar-status {
-        right: 14px;
-        bottom: 14px;
-        font-size: 8px
-      }
-
-      .saga-phase-number {
-        font-size: clamp(72px, 22vw, 110px) !important
-      }
-
-      .saga-card-grid {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 12px
-      }
-
-      .shenlong-modal {
-        padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left))
-      }
-
-      .shenlong-modal__panel {
-        width: min(100%, 94vw);
-        height: min(88svh, 720px);
-        border-radius: 18px
-      }
-
-      .shenlong-modal__dragon {
-        width: min(92%, 420px);
-        height: min(42svh, 280px)
-      }
-
-      .shenlong-modal__eyebrow {
-        top: 18px;
-        letter-spacing: .2em;
-        font-size: 9px;
-        padding-inline: 40px;
-        text-align: center
-      }
-
-      .shenlong-modal__title {
-        bottom: 48px;
-        font-size: clamp(22px, 7vw, 36px);
-        padding-inline: 16px
-      }
-
-      .shenlong-modal__prompt {
-        top: 56px;
-        font-size: 12px;
-        padding-inline: 16px
-      }
-
-      .shenlong-modal__wish,
-      .shenlong-modal__result {
-        bottom: 100px;
-        width: min(100%, 88vw)
-      }
-
-      .saga-wish-input {
-        min-height: 88px;
-        font-size: 16px
-      }
-
-      .saga-collector-hud {
-        left: max(8px, env(safe-area-inset-left));
-        bottom: max(8px, env(safe-area-inset-bottom))
-      }
-
-      .saga-menu-toggle {
-        top: max(12px, env(safe-area-inset-top));
-        right: max(12px, env(safe-area-inset-right))
-      }
-
-      .saga-offcanvas {
-        width: min(100vw, 100%);
-        min-width: 0;
-        max-width: 100%;
-        padding-top: max(88px, calc(env(safe-area-inset-top) + 72px));
-        padding-bottom: max(24px, env(safe-area-inset-bottom))
-      }
-
-      footer .flex {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px
-      }
-
-      #phase-07 .saga-phase-akira img {
-        opacity: .18;
-        object-position: center 28%
-      }
-
-      .hidden-dragon-ball,
-      .dragon-ball-relic,
-      .saga-video-section__arrow,
-      .saga-menu-toggle {
-        min-width: 44px;
-        min-height: 44px
-      }
-    }
-
-    @media (max-width: 480px) {
-      .saga-timeline {
-        display: none
-      }
-
-      .dragon-radar-room {
-        min-height: 480px
-      }
-
-      .dragon-radar-room .dragon-ball-relic-grid {
-        width: min(100%, 300px);
-        grid-template-columns: repeat(3, 1fr) !important
-      }
-
-      .saga-card-carousel {
-        width: max(100%, 780px);
-        height: 360px
-      }
-
-      .saga-expand-card,
-      .saga-expand-card.is-active {
-        height: 360px
-      }
-
-      .saga-card-grid {
-        grid-template-columns: 1fr !important
-      }
-
-      #phase-07 h3 {
-        font-size: clamp(22px, 7vw, 30px) !important;
-        line-height: 1.2 !important
-      }
-
-      .saga-video-section__kicker {
-        letter-spacing: .22em;
-        font-size: 9px
-      }
-    }
-
-    @media (max-width: 360px) {
-      .saga-hero__logo {
-        width: min(92vw, 320px) !important
-      }
-
-      .saga-offcanvas {
-        padding-left: 20px;
-        padding-right: 20px
-      }
-
-      .saga-nav a {
-        font-size: 13px;
-        letter-spacing: .1em
-      }
-    }
-
-    @media (max-height: 480px) and (orientation: landscape) {
-      .saga-hero,
-      .saga-video-section {
-        min-height: auto
-      }
-
-      .saga-video-section__content {
-        min-height: auto;
-        padding-top: 48px;
-        padding-bottom: 48px
-      }
-
-      .saga-video-section__slides {
-        height: auto;
-        min-height: 220px
-      }
-
-      .shenlong-modal__dragon {
-        height: min(36svh, 180px)
-      }
-    }
-
     @media(max-width:700px) {
       .hero-dragon-ball {
         right: 12%;
@@ -3196,6 +2821,36 @@
       }
     }
   </style>
+
+  <style id="performance-mode">
+    /* Cut expensive paint/composite on smaller devices */
+    @media (max-width: 900px) {
+      .saga-phase-video { display: none !important; }
+      .hero-particle { display: none !important; }
+      .saga-video-section__grain { display: none !important; }
+      .saga-card-art--action img { animation: none !important; }
+      .dragon-ball-relic__orb::before,
+      .dragon-ball-relic__orb img { animation: none !important; }
+      .radar-sweep,
+      .radar-sweep:before,
+      .saga-collector-hud__radar::after { animation: none !important; }
+      .saga-phase [class*="backdrop-blur"],
+      .saga-flip-face,
+      .era-panel {
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+      }
+      .saga-card-game::before,
+      .saga-card-game::after { display: none !important; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .saga-phase-video video,
+      .saga-video-section__media video { display: none !important; }
+      * { scroll-behavior: auto !important; }
+    }
+  </style>
+
 </head>
 
 <body
@@ -3299,9 +2954,9 @@
       <section aria-label="Fase 01 — O Começo" class="saga-phase saga-video-section" data-phase="phase-01"
         data-phase-number="01" id="phase-01">
         <div aria-hidden="true" class="saga-video-section__media">
-          <video aria-hidden="true" autoplay="" class="saga-video-section__video"
+          <video aria-hidden="true" class="saga-video-section__video"
             controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture="" disableremoteplayback=""
-            loop="" muted="" playsinline="" preload="auto"
+            loop="" muted="" playsinline="" preload="none" data-bg-video="true"
             src="assets/Goku conhece o mestre Kame pela primeira vez.mp4"></video>
         </div>
         <div class="saga-video-section__wash"></div>
@@ -3371,8 +3026,8 @@
       <section
         class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-2xl flex flex-col gap-space-2xl saga-phase relative"
         data-phase="phase-02" data-phase-number="02" id="phase-02">
-        <div aria-hidden="true" class="saga-phase-video"><video autoplay="" disablepictureinpicture=""
-            disableremoteplayback="" loop="" muted="" playsinline="" preload="metadata"
+        <div aria-hidden="true" class="saga-phase-video"><video disablepictureinpicture=""
+            disableremoteplayback="" loop="" muted="" playsinline="" preload="none" data-bg-video="true"
             src="assets/phase-02.mp4"></video></div>
         <div aria-hidden="true" class="saga-phase-wash"></div>
         <div aria-hidden="true" class="saga-phase-number">02</div>
@@ -3452,7 +3107,7 @@
                 controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture=""
                 disableremoteplayback="" loop="" muted="" playsinline=""
                 poster="https://lh3.googleusercontent.com/aida-public/AB6AXuDCkrb28027w-Tyt9I1Da4K_FnxKq2_o6V-0loarp_Te7Fm0Yt-2eStEtTsivmeAC6KwfVZoOJ4TzcCJtMtyWIU15Wg4a-GdbaLlJO4n81iDeY41EpCK03YaDrfeE5co1aFiecwwmxjCabCqeOWMfbYCT4lnDZlZJOQlL1nNwrr2OKuIMMLl_7Mlnln6Tjv1W27Fbre3_K6O0eTnfUZw_j3kIZ_15QUnLbPssfZ6flPbpXAU68e8e0i"
-                preload="metadata" src="assets/Dragon Ball Classico Abertura HD _ PT-BR (Versão SBT).mp4"></video>
+                preload="none" src="assets/Dragon Ball Classico Abertura HD _ PT-BR (Versão SBT).mp4"></video>
               <button aria-label="Pausar vídeo" class="saga-video-play-toggle" data-video-toggle="" title="Pausar vídeo"
                 type="button">
                 <span class="material-symbols-outlined">pause</span>
@@ -3507,7 +3162,7 @@
                 controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture=""
                 disableremoteplayback="" loop="" muted="" playsinline=""
                 poster="https://lh3.googleusercontent.com/aida-public/AB6AXuBwV26kGuZHY23HaOb_G2cmF3Gus3vmCtsON00doMJBDlDYb16w_f6K8vXqtt4UBlDV2pyz6AjIfAKoZ2z8dpQFIRoiIrc5i_Um-lHFA3RSCXmTtqTZYF5LuLIYGvWm7UIJf51-G9AceF6z6wdonoWrzqRFHiizG-mbf-PEgFUcwztfWPraoPm_VwfVhFWHhBucyhuo0flAjlfjYzNXPIOXBjxnRxdHwT-gschRf09TMCPEWM8ryPBs"
-                preload="metadata" src="assets/Dragon Ball Z 1989 Abertura em Português Raro HD Quality.mp4"></video>
+                preload="none" src="assets/Dragon Ball Z 1989 Abertura em Português Raro HD Quality.mp4"></video>
               <button aria-label="Pausar vídeo" class="saga-video-play-toggle" data-video-toggle="" title="Pausar vídeo"
                 type="button">
                 <span class="material-symbols-outlined">pause</span>
@@ -3560,7 +3215,7 @@
                 controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture=""
                 disableremoteplayback="" loop="" muted="" playsinline=""
                 poster="https://lh3.googleusercontent.com/aida-public/AB6AXuBn0ZDBuckPuaIKIG5omIuCCKitMqe_-FlAt5tKXN47iM8qBqkiOwjEyzO_jb6VsNDE12NYYCAjT3vN2cAYX2tn1Z2LRrz0YGSXnd3cxtGdYRu58lu6gCKzoFtGUDHw-IBtPlXqRO1LhCEcwnXYXK9tYLHONsZn9JCeis4k4gwDoE-HkD0EEECvcG_Kv687njQkfsOnbPDp92k2ax04FSru4GucUUCWhoUP-Qbye7TFJhvJJH2QWRK_"
-                preload="metadata" src="assets/Dragon Ball GT Abertura [Melhor qualidade][HD].mp4"></video>
+                preload="none" src="assets/Dragon Ball GT Abertura [Melhor qualidade][HD].mp4"></video>
               <button aria-label="Pausar vídeo" class="saga-video-play-toggle" data-video-toggle="" title="Pausar vídeo"
                 type="button">
                 <span class="material-symbols-outlined">pause</span>
@@ -3612,7 +3267,7 @@
                 controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture=""
                 disableremoteplayback="" loop="" muted="" playsinline=""
                 poster="https://lh3.googleusercontent.com/aida-public/AB6AXuAOtQIK2JrsM5EtVbSC3rEATXRklmdYpwBLhvTcXc8Q0ZJ7J1NhBShYDDEWlUlVuExZgNuJMKrJHK0JWJF-7oqEWXeHYs6ft92elQ4OmRuYAnGBTgGBZrQTTjmiocpg8GlaKRK7w95ExHjFGWUJRHWcRlmVodMXmWbZwp1Hvy1akJT5LRoNZYCXPHDx6tRD-XPRc0IkFuz9qxyNtgdXiajxgGstfd3ycFJO7Shl6LWvd3Hm536J5ieI"
-                preload="metadata"
+                preload="none"
                 src="assets/Dragon Ball Super _ Abertura 1 - Versão Brasileira (Oficial).mp4"></video>
               <button aria-label="Pausar vídeo" class="saga-video-play-toggle" data-video-toggle="" title="Pausar vídeo"
                 type="button">
@@ -3635,8 +3290,8 @@
       <section
         class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-3xl flex flex-col gap-space-2xl saga-phase"
         data-phase="phase-03" data-phase-number="03" id="phase-03">
-        <div aria-hidden="true" class="saga-phase-video"><video autoplay="" disablepictureinpicture=""
-            disableremoteplayback="" loop="" muted="" playsinline="" preload="metadata"
+        <div aria-hidden="true" class="saga-phase-video"><video disablepictureinpicture=""
+            disableremoteplayback="" loop="" muted="" playsinline="" preload="none" data-bg-video="true"
             src="assets/phase-03.mp4"></video></div>
         <div aria-hidden="true" class="saga-phase-wash"></div>
         <div aria-hidden="true" class="saga-phase-number">03</div>
@@ -3768,8 +3423,8 @@
       <!-- SECTION 4: AS 7 ESFERAS DO DRAGÃO & RITUAL DE SHENLONG -->
       <section class="w-full py-space-4xl bg-surface-container-lowest relative overflow-hidden saga-phase"
         data-phase="phase-04" data-phase-number="04" id="phase-04">
-        <div aria-hidden="true" class="saga-phase-video"><video autoplay="" disablepictureinpicture=""
-            disableremoteplayback="" loop="" muted="" playsinline="" preload="metadata"
+        <div aria-hidden="true" class="saga-phase-video"><video disablepictureinpicture=""
+            disableremoteplayback="" loop="" muted="" playsinline="" preload="none" data-bg-video="true"
             src="assets/phase-04.mp4"></video></div>
         <div aria-hidden="true" class="saga-phase-wash"></div>
         <div aria-hidden="true" class="saga-phase-number">04</div>
@@ -3885,8 +3540,8 @@
       <section
         class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-4xl flex flex-col gap-space-2xl saga-phase relative"
         data-phase="phase-05" data-phase-number="05" id="phase-05">
-        <div aria-hidden="true" class="saga-phase-video"><video autoplay="" disablepictureinpicture=""
-            disableremoteplayback="" loop="" muted="" playsinline="" preload="metadata"
+        <div aria-hidden="true" class="saga-phase-video"><video disablepictureinpicture=""
+            disableremoteplayback="" loop="" muted="" playsinline="" preload="none" data-bg-video="true"
             src="assets/phase-05.mp4"></video></div>
         <div aria-hidden="true" class="saga-phase-wash"></div>
         <div aria-hidden="true" class="saga-phase-number">05</div>
@@ -3898,7 +3553,7 @@
             <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Roster Cósmico</span>
             <h2 class="font-display-lg text-display-lg text-on-surface uppercase mt-space-xxs">Titãs do Multiverso</h2>
           </div>
-          <div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar max-w-full pb-1">
+          <div class="flex items-center gap-space-xs">
             <button
               class="roster-filter active-filter px-space-md py-1 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm uppercase"
               onclick="filterRoster('all')">Todos</button>
@@ -4103,8 +3758,8 @@
       <section
         class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-4xl flex flex-col gap-space-2xl saga-phase relative"
         data-phase="phase-06" data-phase-number="06" id="phase-06">
-        <div aria-hidden="true" class="saga-phase-video"><video autoplay="" disablepictureinpicture=""
-            disableremoteplayback="" loop="" muted="" playsinline="" preload="metadata"
+        <div aria-hidden="true" class="saga-phase-video"><video disablepictureinpicture=""
+            disableremoteplayback="" loop="" muted="" playsinline="" preload="none" data-bg-video="true"
             src="assets/phase-06.mp4"></video></div>
         <div aria-hidden="true" class="saga-phase-wash"></div>
         <div aria-hidden="true" class="saga-phase-number">06</div>
@@ -4178,17 +3833,17 @@
       <!-- LUXURY FOOTER BANNER ARCHIVE STATEMENT -->
       <section class="w-full bg-surface-container-low py-space-3xl relative overflow-hidden saga-phase"
         data-phase="phase-07" data-phase-number="07" id="phase-07">
-        <div aria-hidden="true" class="saga-phase-akira">
-          <img alt="" decoding="async" loading="lazy" src="assets/akira.webp" />
-        </div>
+        <div aria-hidden="true" class="saga-phase-video"><video disablepictureinpicture=""
+            disableremoteplayback="" loop="" muted="" playsinline="" preload="none" data-bg-video="true"
+            src="assets/phase-07.mp4"></video></div>
         <div aria-hidden="true" class="saga-phase-wash"></div>
         <div aria-hidden="true" class="saga-phase-number">07</div>
         <button aria-label="Sinal de esfera detectado no legado" class="hidden-dragon-ball phase07-dragon-ball"
           data-hidden-ball="phase07" type="button"><img alt="Esfera do Dragão"
             src="assets/7_estrelas-removebg-preview.png" /></button>
         <div
-          class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-xl relative z-10">
-          <div class="flex flex-col gap-space-xxs max-w-xl min-w-0">
+          class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-xl">
+          <div class="flex flex-col gap-space-xxs max-w-xl">
             <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">In Memoriam</span>
             <h3 class="font-display-lg text-display-lg text-on-surface uppercase leading-tight">
               "Para sempre guardião dos nossos sonhos mais audaciosos."
@@ -4198,8 +3853,8 @@
               coragem, amizade e determinação nos corações do mundo inteiro.
             </p>
           </div>
-          <a class="px-space-xl py-space-md rounded bg-surface-container-highest text-secondary border border-secondary/40 font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary hover:text-on-secondary transition-all duration-300 shrink-0"
-            href="#phase-00">
+          <a class="px-space-xl py-space-md rounded bg-surface-container-highest text-secondary border border-secondary/40 font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary hover:text-on-secondary transition-all duration-300"
+            href="#">
             Retornar ao Topo
           </a>
         </div>
@@ -4246,16 +3901,17 @@
 
         function playEraVideo(video, withSound = true) {
           if (!video) return;
+          const mobile = window.matchMedia('(max-width: 900px)').matches;
           video.pause();
           video.currentTime = 0;
-          video.defaultMuted = !withSound;
-          video.muted = !withSound;
-          video.volume = 1;
+          // Mobile: always muted to avoid heavy decode + autoplay blocks
+          const sound = withSound && !mobile;
+          video.defaultMuted = !sound;
+          video.muted = !sound;
+          video.volume = sound ? 1 : 0;
           const playPromise = video.play();
           if (playPromise && playPromise.catch) {
-            playPromise.catch(() => {
-              // Se o navegador bloquear áudio/autoplay, o botão continua permitindo play manual.
-            });
+            playPromise.catch(() => {});
           }
           updateVideoToggle(video);
         }
@@ -4322,8 +3978,11 @@
           if (firstVideo) {
             firstVideo.muted = true;
             firstVideo.defaultMuted = true;
-            const p = firstVideo.play();
-            if (p && p.catch) p.catch(() => { });
+            // Don't force-play on mobile — saves CPU until user opens the tab area
+            if (!window.matchMedia('(max-width: 900px)').matches) {
+              const p = firstVideo.play();
+              if (p && p.catch) p.catch(() => { });
+            }
             updateVideoToggle(firstVideo);
           }
         });
@@ -4540,7 +4199,7 @@
     </div>
   </footer>
   <script id="saga-cinematic-js">
-    (function () {const toggle = document.getElementById('sagaMenuToggle'), panel = document.getElementById('sagaOffcanvas'), overlay = document.getElementById('sagaOverlay'), close = document.getElementById('sagaMenuClose'); function setOpen(open) {toggle.classList.toggle('is-open', open); panel.classList.toggle('is-open', open); overlay.classList.toggle('is-open', open); toggle.setAttribute('aria-expanded', String(open)); panel.setAttribute('aria-hidden', String(!open)); toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu'); document.body.style.overflow = open ? 'hidden' : ''} toggle.addEventListener('click', () => setOpen(!panel.classList.contains('is-open'))); overlay.addEventListener('click', () => setOpen(false)); if (close) close.addEventListener('click', () => setOpen(false)); document.addEventListener('keydown', e => {if (e.key === 'Escape') setOpen(false)}); document.querySelectorAll('[data-phase-link]').forEach(a => a.addEventListener('click', () => setOpen(false))); const phases = [...document.querySelectorAll('.saga-phase')], links = [...document.querySelectorAll('[data-phase-link]')], dots = [...document.querySelectorAll('[data-phase-dot]')]; if (window.gsap && window.ScrollTrigger) {gsap.registerPlugin(ScrollTrigger); phases.forEach((section, i) => {const els = section.querySelectorAll('h1,h2,h3,p,img,.grid,.flex'); gsap.fromTo(els, {opacity: .18, y: 50, scale: .985}, {opacity: 1, y: 0, scale: 1, ease: 'none', stagger: .025, scrollTrigger: {trigger: section, start: 'top 82%', end: 'center 48%', scrub: 1.2}}); gsap.to(section, {backgroundPosition: '50% 42%', ease: 'none', scrollTrigger: {trigger: section, start: 'top bottom', end: 'bottom top', scrub: true}}); ScrollTrigger.create({trigger: section, start: 'top center', end: 'bottom center', onEnter: () => activate(i), onEnterBack: () => activate(i)});}); function activate(i) {links.forEach((l, j) => l.classList.toggle('active', i === j)); dots.forEach((d, j) => d.classList.toggle('active', i === j))} } else {function activate(i) {links.forEach((l, j) => l.classList.toggle('active', i === j)); dots.forEach((d, j) => d.classList.toggle('active', i === j))} const io = new IntersectionObserver(es => es.forEach(e => {if (e.isIntersecting) activate(phases.indexOf(e.target))}), {threshold: .45}); phases.forEach(p => io.observe(p))} dots.forEach(d => d.addEventListener('click', e => {const p = phases[Number(d.dataset.phaseDot)]; if (p) {e.preventDefault(); p.scrollIntoView({behavior: 'smooth', block: 'start'}); history.replaceState(null, '', d.getAttribute('href'));} })); links.forEach(l => l.addEventListener('click', e => {const p = document.getElementById(l.getAttribute('href').slice(1)); if (p) {e.preventDefault(); p.scrollIntoView({behavior: 'smooth'})} }));})();
+    (function () {const toggle = document.getElementById('sagaMenuToggle'), panel = document.getElementById('sagaOffcanvas'), overlay = document.getElementById('sagaOverlay'), close = document.getElementById('sagaMenuClose'); function setOpen(open) {toggle.classList.toggle('is-open', open); panel.classList.toggle('is-open', open); overlay.classList.toggle('is-open', open); toggle.setAttribute('aria-expanded', String(open)); panel.setAttribute('aria-hidden', String(!open)); toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu'); document.body.style.overflow = open ? 'hidden' : ''} toggle.addEventListener('click', () => setOpen(!panel.classList.contains('is-open'))); overlay.addEventListener('click', () => setOpen(false)); if (close) close.addEventListener('click', () => setOpen(false)); document.addEventListener('keydown', e => {if (e.key === 'Escape') setOpen(false)}); document.querySelectorAll('[data-phase-link]').forEach(a => a.addEventListener('click', () => setOpen(false))); const phases = [...document.querySelectorAll('.saga-phase')], links = [...document.querySelectorAll('[data-phase-link]')], dots = [...document.querySelectorAll('[data-phase-dot]')]; if (window.gsap && window.ScrollTrigger) {gsap.registerPlugin(ScrollTrigger); const light = window.matchMedia('(max-width: 900px)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches; phases.forEach((section, i) => { if (!light) { const els = section.querySelectorAll('h1,h2,h3,p,img,.grid,.flex'); gsap.fromTo(els, {opacity: .18, y: 50, scale: .985}, {opacity: 1, y: 0, scale: 1, ease: 'none', stagger: .025, scrollTrigger: {trigger: section, start: 'top 82%', end: 'center 48%', scrub: 1.2}}); } ScrollTrigger.create({trigger: section, start: 'top center', end: 'bottom center', onEnter: () => activate(i), onEnterBack: () => activate(i)});}); function activate(i) {links.forEach((l, j) => l.classList.toggle('active', i === j)); dots.forEach((d, j) => d.classList.toggle('active', i === j))} } else {function activate(i) {links.forEach((l, j) => l.classList.toggle('active', i === j)); dots.forEach((d, j) => d.classList.toggle('active', i === j))} const io = new IntersectionObserver(es => es.forEach(e => {if (e.isIntersecting) activate(phases.indexOf(e.target))}), {threshold: .45}); phases.forEach(p => io.observe(p))} dots.forEach(d => d.addEventListener('click', e => {const p = phases[Number(d.dataset.phaseDot)]; if (p) {e.preventDefault(); p.scrollIntoView({behavior: 'smooth', block: 'start'}); history.replaceState(null, '', d.getAttribute('href'));} })); links.forEach(l => l.addEventListener('click', e => {const p = document.getElementById(l.getAttribute('href').slice(1)); if (p) {e.preventDefault(); p.scrollIntoView({behavior: 'smooth'})} }));})();
   </script>
   <script id="saga-hero-parallax-script">
     (function () {
@@ -4557,7 +4216,8 @@
       const scroll = hero.querySelector('.saga-hero__scroll');
       const particles = hero.querySelectorAll('.hero-particle');
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduce) return;
+      const mobile = window.matchMedia('(max-width: 900px)').matches;
+      if (reduce || mobile) return;
 
       const intro = gsap.timeline({defaults: {ease: 'power3.out'}});
       intro.fromTo(bg, {scale: 1.16, opacity: 0.72}, {scale: 1.08, opacity: 1, duration: 1.8}, 0)
@@ -4767,6 +4427,85 @@
       <div class="saga-collector-hud__detail" id="collectorDetail">Radar do Dragão detectou uma nova esfera</div>
     </div>
   </div>
+
+  <script id="performance-manager">
+  (function () {
+    const isMobile = window.matchMedia('(max-width: 900px)').matches;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Only one background video playing at a time; pause off-screen.
+    const bgVideos = [...document.querySelectorAll('video[data-bg-video], .saga-phase-video video, .saga-video-section__media video')];
+
+    function pauseAll(except) {
+      bgVideos.forEach(v => {
+        if (v !== except) {
+          try { v.pause(); } catch (e) {}
+        }
+      });
+    }
+
+    function safePlay(video) {
+      if (!video || reduce || isMobile && video.closest('.saga-phase-video')) return;
+      pauseAll(video);
+      video.muted = true;
+      const p = video.play();
+      if (p && p.catch) p.catch(function () {});
+    }
+
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          const video = entry.target;
+          if (entry.isIntersecting && entry.intersectionRatio > 0.35) {
+            safePlay(video);
+          } else {
+            try { video.pause(); } catch (e) {}
+          }
+        });
+      }, { threshold: [0, 0.35, 0.6] });
+
+      bgVideos.forEach(function (video) {
+        // Mobile: strip phase background sources to save bandwidth/CPU
+        if (isMobile && video.closest('.saga-phase-video')) {
+          video.removeAttribute('src');
+          video.load();
+          return;
+        }
+        io.observe(video);
+      });
+    } else {
+      bgVideos.forEach(function (video) {
+        if (isMobile && video.closest('.saga-phase-video')) {
+          video.removeAttribute('src');
+          video.load();
+        }
+      });
+    }
+
+    // Era trailers: never autoplay all — keep muted and paused until tab switch / user
+    document.querySelectorAll('.saga-era-video').forEach(function (video, i) {
+      video.preload = 'none';
+      if (i > 0) {
+        try { video.pause(); } catch (e) {}
+      }
+    });
+
+    // Lighter GSAP on mobile: kill heavy scrub triggers after a tick
+    if (isMobile || reduce) {
+      window.addEventListener('load', function () {
+        if (window.ScrollTrigger) {
+          try {
+            ScrollTrigger.getAll().forEach(function (t) {
+              // keep menu/timeline activation; drop parallax scrub pairs when possible
+              if (t.vars && t.vars.scrub) t.kill();
+            });
+          } catch (e) {}
+        }
+      });
+    }
+  })();
+  </script>
+
 </body>
 
 </html>
